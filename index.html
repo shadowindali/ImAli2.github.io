@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/Lig.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Ligue 1</title>
+    <style>
+        header ul li a:hover {
+            color:rgb(204, 255, 0);
+        }
+    </style>
+</head>
+<body>
+  <!--header&nav-->
+    <header>
+        <img class="icon-header" src="./images/Lig.png">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Laliga.html">Laliga</a></li>
+            <li><a href="premier.html">Premier League</a></li>
+            <li><a style="color:rgb(204, 255, 0);" href="Ligue1.html">Ligue 1</a></li>
+            <li><a href="bundeslig.html">Bundesliga</a></li>
+            <li><a href="SeriaA.html">Serie A</a></li>
+        </ul>
+        <button id="show-div" style="background-color:rgb(204, 255, 0); color: black;">Join League</button>
+    </header>
+  
+  <!--main-->
+    <main>
+      <!--Form-->
+      <div id="popup-div" class="li-body1">
+        <div class="li-container">
+            <img class="li-form-img" src="./li-images/10.jpeg" alt="Your Image">
+            <div class="li-form-section">
+              <form action="index.html" method="post">
+                <label for="username">Username :</label><input type="text" id="username" width="25" required placeholder="Your Username">
+                <br><br>
+  
+                <label for="email">Email :</label><input type="email" id="email" width="25" required email placeholder="Your email">
+                <br><br>
+  
+                <label for="pass">Password :</label><input type="password" id="pass" width="20" required placeholder="Your password">
+                <br><br>
+  
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <br><br>
+  
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <br>
+                <br>
+                <label for="fav">Favorite Team:</label>
+                <select id="fav">
+                  <option value="0">Select Team:</option>
+                  <option value="1">AC AJACCIO</option>
+                  <option value="2">AJ AUXERRE</option>
+                  <option value="3">ANGERS SCO</option>
+                  <option value="4">AS MONACO</option>
+                  <option value="5">CLEREMONT FOOT 63</option>
+                  <option value="6">ESTAC TROYES</option>
+                  <option value="7">FC LOREINT</option>
+                  <option value="8">FC NANTES</option>
+                  <option value="9">LOSC LILLE</option>
+                  <option value="10">MONTIPELLIER HERAULT SC</option>
+                  <option value="11">OGC NICE</option>
+                  <option value="12">OLYMPIQUE DE MARSEILEE</option>
+                  <option value="13">OLYMPIQUE LYONNAIS</option>
+                  <option value="14">PARIS SAINT-GERMIAN</option>
+                  <option value="15">RC LENS</option>
+                  <option value="16">RC STRASBOURG ALSACE</option>
+                  <option value="17">STADE BRESTOIS 29</option>
+                  <option value="18">STADE DE REIMS</option>
+                  <option value="19">STADE RENNIAS FC</option>
+                  <option value="20">TOULOUSE FC</option>
+                </select>
+
+                <br><br>
+  
+                &nbsp;&nbsp;
+                <input class="li-form-button" id="sub1" type="submit" value="Submit"/>
+                &nbsp;&nbsp;
+                <input class="li-form-button" type="reset" value="Reset">&nbsp;&nbsp;
+                <input class="li-form-button" id="li-form-back" type="button" value="Back">
+              </form>
+          </div>
+        </div>
+      </div>
+
+      <!--head-->
+      <div id="li-head-all">
+        <div class="li-head" id="black">
+            <button id="headb" class="li-bw" onclick="Black()">White mode</button>
+            <h1 class="li-head-h1">Welcome To The French League</h1>
+            <p class="li-head-p1">
+              <span class="li-ligue1">Ligue 1</span>, officially known as <span class="li-ligue1">Ligue 1</span> Uber Eats for sponsorship reasons,
+                 is a French professional league for men's association football clubs
+            </p>
+            <p class="li-head-p2">
+              At the top of the French football league system, it is the country's primary football competition.
+               Administrated by the Ligue de Football Professional
+               <span class="li-ligue1"><span class="li-ligue1">Ligue 1</span></span> is contested by 20 clubs and operates on a system of promotion and relegation from and to Ligue 2.
+            </p>
+        </div>
+
+        <div class="li-head-w" id="white">
+            <button id="headw" class="li-bw-w" onclick="White()">Dark mode</button>
+            <h1 class="li-head-h1-w">Welcome To The French League</h1>
+            <p class="li-head-p1-w">
+              <span class="li-ligue1">Ligue 1</span>, officially known as <span class="li-ligue1-w">Ligue 1</span> Uber Eats for sponsorship reasons,
+                 is a French professional league for men's association football clubs
+            </p>
+            <p class="li-head-p2-w">
+              At the top of the French football league system, it is the country's primary football competition.
+               Administrated by the Ligue de Football Professional
+               <span class="li-ligue1-w"><span class="li-ligue1-w">Ligue 1</span></span> is contested by 20 clubs and operates on a system of promotion and relegation from and to Ligue 2.
+            </p>
+        </div>
+      </div>
+
+
+      <!--buttons-->
+        <div class="li-tabs" id="li-buttons">
+          <button class="li-tab-btn active" data-tab="li-tab-1">History</button>
+          <button class="li-tab-btn" data-tab="li-tab-2">Clubs</button>
+          <button class="li-tab-btn" data-tab="li-tab-3">Stats</button>
+        </div>
+   
+        <!--All Divs-->
+         <div class="li-tab-content" id="li-contents">
+            <!--History--> 
+            <div id="li-tab-1" class="li-tab-item active">
+              <div class="li-history" id="history1">
+                <video class="li-history-video" autoplay muted loop >
+                  <source src="./li-images/videoplayback.webm">
+                </video>
+                <h1 class="li-history-h1">The<span>Beginning</span></h1>
+                <p class="li-history-p1">
+                  French football resisted professionalization until 1930,
+                  until professionalism was legalized in 1930.
+                  In July 1930, the French Football Federation voted 128 to 20 with one abstention to begin professionalization in France.
+                  The true founders of professionalism in France are <span>Georges Bayrou</span>,
+                  <span>Emmanuel Gambardella</span> and <span>Gabriel Hanot.</span>
+                  <hr color="rgb(204, 255, 0)" width="45%" size="px">
+                </p>
+              
+                <div id="li-history-trophy">
+                  <figure class="li-history-old">
+                    <img src="./li-images/old.png">
+                    <figcaption>Old <span class="li-ligue1">Ligue 1</span> Trophy<sub style="font-size: 0.6em; color:rgb(204, 255, 0);">(before 2006)</sub><br><br>“le Trophée de <span class="li-ligue1">Ligue 1</span>”</figcaption>
+                  </figure>
+                  <figure class="li-history-new">
+                    <img src="./li-images/new.png">
+                    <figcaption>New <span class="li-ligue1">Ligue 1</span> Trophy<sub style="font-size: 0.6em; color:rgb(204, 255, 0);">(after 2006)</sub><br><br>"Hexagoal"</figcaption>
+                  </figure>
+                </div>
+
+                <p class="li-history-p1">
+                  The first season of the professional league was played in 1932 and included 20 teams 
+                  (at this certain season the league was called National),
+                   the same number of teams that are included in <span class="li-ligue1">Ligue 1</span> today.
+                </p>
+
+                <p class="li-history-p1">
+                  The winner has since 2007 received the <span>“Hexagoal”</span> trophy designed
+                   by <span>Pablo Reinoso</span>. It has replaced the old trophy,
+                   called “<span>le Trophée de <span class="li-ligue1">Ligue 1</span></span>”, designed by <span>d'Andrée Putman</span>.
+                </p>
+                <hr color="rgb(204, 255, 0)">
+                <br>
+                <br>
+                <table class="li-history-table" id="mytable">
+                  <tr>
+                    <th colspan="2">Ligue 1 Timeline</th>
+                  </tr>
+                  <tr>
+                    <th>Year</th>
+                    <th>Event</th>
+                  </tr>
+                  <tr>
+                    <td>1919</td>
+                    <td>The French Football Federation (Fédération Française de Football; FFF) is founded.</td>
+                  </tr>
+                  <tr>
+                    <td>1932</td>
+                    <td> National (predecessor to Ligue 1) is established.</td>
+                  </tr>
+                  <tr>
+                    <td>1933</td>
+                    <td>The league is renamed as Division 1.</td>
+                  </tr>
+                  <tr>
+                    <td>1939</td>
+                    <td>The 1939-40 season is cancelled due to the WWII.</td>
+                  </tr>
+                  <tr>
+                    <td>1945</td>
+                    <td> The league is restored after the war.</td>
+                  </tr>
+                  <tr>
+                    <td>1995</td>
+                    <td> From the 1995-96 season, wins are awarded three points instead of two.</td>
+                  </tr>
+                  <tr>
+                    <td>2002</td>
+                    <td>The league is renamed as Ligue 1.</td>
+                  </tr>
+                  <tr>
+                    <td>2017</td>
+                    <td> The league is named Ligue 1 Conforama due to sponsorship reasons.</td>
+                  </tr>
+                  <tr>
+                    <td>2020</td>
+                    <td> The season is suspended after 279 games due to coronavirus outbreak; PSG is later awarded the league title.</td>
+                  </tr>
+                </table>
+                <img class="li-history-logo" src="./li-images/24.jpg">
+              </div>
+          </div>
+
+
+          <!--Clubs-->      
+            <div id="li-tab-2" class="li-tab-item">
+              <div class="li-clubs" id="clubs">
+                <div class="li-clubs-logos">
+                  <img class="li-image" src="./li-images/logos/AC_Ajaccio_logo.png">
+                  <img class="li-image" src="./li-images/logos/AJAuxerreLogo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Angers_SCO.png">
+                  <img class="li-image" src="./li-images/logos/LogoASMonacoFC2021.svg.png">         
+                  <img class="li-image" src="./li-images/logos/Clermont_Foot_logo.svg.png">
+
+                  <!--AC Ajaccio-->
+                  <div style="background: linear-gradient(140deg , #ff0000 , #ffffff);" class="li-click-content">
+                    <h1>AC Ajaccio</h1>
+                    <p>
+                      Athletic Club Ajaccio (Corsican: Athletic Club Ajaccio),
+                      commonly referred to as AC Ajaccio, ACA or simply Ajaccio,
+                      is a French association football club based in the city of Ajaccio on the island of Corsica.
+                      The club was founded in 1910 and plays in Ligue 1. The club president is Christian Leca,
+                      and the first-team is coached by manager Olivier Pantaloni,
+                       following the sacking of Christian Bracconi in October 2014.
+                        Ajaccio play their home matches at the Stade François Coty and are rivals with fellow Corsican club Bastia,
+                      with whom they contest the Corsica derby (Derby Corse).
+                    </p>
+                    <img src="./li-images/ACajaccio.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgba(255, 0, 0, 0.692);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Benjamin Leroy</li>
+                        <li>Ghjuvanni Quilichini</li>
+                        <li>François-Joseph Sollacaro</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>Chaker Alhadhur</li>
+                        <li>Mohamed Youssouf</li>
+                        <li>Ismaël Diallo</li> 
+                        <li>Youssouf Koné</li> 
+                        <li>Mickaël Alphonse</li>
+                        <li>Cédric Avinel</li>
+                        <li>Oumar Gonzalez</li>
+                        <li>Anthony Khelifa</li>
+                        <li>Victor Lebas</li>
+                        <li>Fernand Mayembo</li>
+                        <li>Clément Vidal</li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Cyrille Bayala</li>
+                        <li>Riad Nouri</li>
+                        <li>Michaël Barreto</li>
+                        <li>Yanis Cimignani</li>
+                        <li>Florian Chabrolle</li>
+                        <li>Mathieu Coutadeur </li>
+                        <li>Paolo Lebas</li>
+                        <li>Thomas Mangani</li>
+                        <li>Vincent Marchetti </li>
+                        <li>Ruan Levine</li>
+                        <li>Alassane N'Diaye</li>
+                        <li>Kevin Spadanuda</li>
+                        <li>Youcef Belaili</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Ivane Chegra</li>
+                        <li>Romain Hamouma</li>
+                        <li>Mamadu Silla</li>
+                        <li>Kouamé Botué</li>
+                        <li>Moussa Djitte</li>
+                        <li>Mounaim El Idrissy</li>
+                        <li>Moussa Soumano</li>
+                        <li>Yoann Touzghar</li>
+                    </ul>
+                  </div>
+
+                  <!--AJ Auxerre-->
+                  <div style="background:linear-gradient(140deg , #0059ff , #ffffff);" class="li-click-content">
+                    <h1>AJ Auxerre</h1>
+                    <p>
+                      AJ Auxerre , is a French football club based in the commune of Auxerre in Burgundy.
+                      The club was founded in 1905 and currently plays in Ligue 1, the first division of French football.
+                      Auxerre plays its home matches at the Stade l'Abbé-Deschamps on the banks of the Yonne River.
+                       The club has won the Ligue 1 title once, in the 1995–96 season. Two years prior,
+                      Auxerre achieved its first major honour by winning the Coupe de France in 1994. The club has since added three more Coupe de France titles,
+                      which ties the club for fifth-best among teams who have won the trophy.
+                    </p>
+                    <img src="./li-images/AJAux.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 66, 248);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Théo De Percin</li>
+                        <li>Donovan Léon</li>
+                        <li>Ionuț Radu</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>	Brayann Pereira</li>
+                        <li>Akim Zedadka</li>
+                        <li>Souleymane Touré</li>
+                        <li>Denys Bain</li>
+                        <li>Kenji-Van Boto</li>
+                        <li>Julian Jeanvier</li>
+                        <li>Gideon Mensah</li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Elisha Owusu</li>
+                        <li>Rayan Raveloson</li>
+                        <li>Kylian Silvestre</li>
+                        <li>Birama Touré </li>
+                        <li>Gauthier Hein</li>
+                        <li>Lassine Sinayoko</li>
+                        <li>Rémy Dugimont</li>
+                        <li>Mathias Autret</li>
+                        <li>Ousoumane Camara</li>
+                        <li>Youssouf M'Changama</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Mbaye Niang</li>
+                        <li>Nuno Jóia</li>
+                        <li>Matthis Abline</li>
+                        <li>Kévin Danois</li>
+                        <li>Ousmane Camara</li>
+                        <li>Kays Ruiz</li>
+                    </ul>
+                  </div>
+
+                  <!--Angers SCO-->
+                  <div style="background: linear-gradient(140deg , #000000 , #ffffff);" class="li-click-content">
+                    <h1>Angers SCO</h1>
+                    <p>
+                      Angers Sporting Club de l'Ouest, commonly referred to as Angers SCO or simply Angers
+                       is a French professional football club based in Angers in Pays de la Loire in western France.
+                        The club was founded in 1919 and plays in Ligue 1, the first division of Football in France,
+                         having achieved promotion to the league in 2015 after 21 years. It plays its home matches at the Stade Raymond Kopa.
+                       The club has played 23 seasons in the French top flight.
+                    </p>
+                    <img src="./li-images/anger.png">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Paul Bernardoni</li>
+                        <li>Théo Borne</li>
+                        <li>Yahia Fofana</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>Abdoulaye Bamba</li>
+                        <li>Lilian Raolisoa</li>
+                        <li>Halid Šabanović</li>
+                        <li>Pierrick Capelle </li>
+                        <li>Ilyes Cheti</li>
+                        <li>Faouzi Ghoulam</li>
+                        <li>Miha Blažič</li>
+                        <li>Ousmane Camara</li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Ibrahim Amadou</li>
+                        <li>Batista Mendy</li>
+                        <li>Waniss Taibi</li>
+                        <li>Salim Akkal</li>
+                        <li>Jean Mattéo Bahoya</li>
+                        <li>Farid El Melali</li>
+                        <li>Sada Thioub</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Ibrahima Niane</li>
+                        <li>Loïs Diony</li>
+                        <li>Adrien Hunou</li>
+                        <li>Billal Brahimi</li>
+                        <li>Abdallah Sima</li>
+                    </ul>
+                  </div>
+
+                  <!--Monaco-->
+                  <div style="background: linear-gradient(140deg , #ff0000 , gold);" class="li-click-content">
+                    <h1>AS Monaco</h1>
+                    <p>
+                      Monaco, is a professional football club based in Monaco that is a member of French Football Federation (FFF) and competes in Ligue 1,
+                      the top tier of French football. Founded in 1918,the team plays its home matches at the Stade Louis II in 
+                      Fontvieille Its training center is situated in neighboring France, in la Turbie.
+                    </p>
+                    <img src="./li-images/monaco.png">
+                    <ul style="box-shadow: 3px 3px 3px rgba(255, 0, 0, 0.692);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Thomas Didillon</li>
+                        <li>Yann Liénard</li>
+                        <li>	Alexander Nübel</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>Malang Sarr</li>
+                        <li>Ruben Aguilar</li>
+                        <li>Vanderson</li>
+                        <li>Axel Disasi </li>
+                        <li>Ismail Jakobs</li>
+                        <li>	Guillermo Maripán</li>
+                        <li>Chrislain Matsima</li>
+                        <li>Yllan Okou</li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Mohamed Camara</li>
+                        <li>Maghnes Akliouche</li>
+                        <li>Gelson Martins</li>
+                        <li>Youssouf Fofana</li>
+                        <li>Eliot Matazo</li>
+                        <li>Krépin Diatta</li>
+                        <li>Aleksandr Golovin</li>
+                        <li>Takumi Minamino</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Breel Embolo</li>
+                        <li>Myron Boadu</li>
+                        <li>Wissam Ben Yedder </li>
+                        <li>Eliesse Ben Seghir</li>
+                    </ul>
+                  </div>
+                  
+                  <!--Clermont Foot 63-->
+                  <div style="background: linear-gradient(140deg , #cf0000 , #00028b);" class="li-click-content">
+                    <h1>Clermont Foot 63</h1>
+                    <p>
+                      Clermont Foot 63 is a French association football club based in Clermont-Ferrand.
+                       The first incarnation of the club was formed in 1911 and the current club was created in 1990 as a result of a merger.
+                       The club plays its home matches at the Stade Gabriel Montpied located within the city. Between 2014 and 2017,
+                       Clermont was managed by Corinne Diacre, the first woman to manage a men's professional football team. 
+                    </p>
+                    <img src="./li-images/clare.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(255, 0, 0);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Mory Diaw</li>
+                        <li>Ouparine Djoco</li>
+                        <li>Lucas Margueron</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>Maximiliano Caufriez</li>
+                        <li>Wabo Kamdem</li>
+                        <li>Alidu Seidu</li>
+                        <li>Mehdi Zeffane</li>
+                        <li>Souleymane Cissé</li>
+                        <li>Florent Ogier </li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Neto Borges</li>
+                        <li>Johan Gastien </li>
+                        <li>Maxime Gonalons</li>
+                        <li>Yohann Magnin</li>
+                        <li>Yanis Massolin</li>
+                        <li>Jim Allevinah</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Aïman Maurer</li>
+                        <li>Komnen Andrić</li>
+                        <li>Grejohn Kyei</li>
+                    </ul>
+                  </div>
+
+                  <img class="li-image" src="./li-images/logos/ES_Troyes_AC.svg.png">
+                  <img class="li-image" src="./li-images/logos/FC_Lorient_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Logo_FC_Nantes.png">
+                  <img class="li-image" src="./li-images/logos/Lille_OSC_2018_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Montpellier_HSC_logo.svg.png">
+
+
+                  <!--Estac Troyes-->
+                  <div style="background: linear-gradient(140deg , #daa32e , #0774ce);" class="li-click-content">
+                    <h1>Estac Troyes</h1>
+                    <p>
+                      Espérance Sportive Troyes Aube Champagne (ESTAC), commonly known as Troyes, is a French association football club,
+                       based in Troyes, who play in Ligue 1, the highest level of France's football league system,
+                      and plays its home matches at the Stade de l'Aube.
+                       It was founded in 1986, as the third professional club from the city, after AS Troyes-Savinienne and Troyes AF.
+                    </p>
+                    <img src="./li-images/estac.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(241, 219, 20);">
+                        <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                        <li>Gauthier Gallon</li>
+                        <li>Mateusz Lis</li>
+                        <li>Jessy Moulin</li>
+                        <li style="color: black; text-align: center;">DEFENDERS</li>
+                        <li>Papa Ndiaga Yade</li>
+                        <li>Thierno Balde</li>
+                        <li>Abdu Conté</li>
+                        <li>Yasser Larouci</li>
+                        <li>Eric N'Jo</li>
+                        <li>Yoann Salmier </li>
+                        <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                        <li>Florian Tardieu </li>
+                        <li>Ante Palaversa</li>
+                        <li>N'Guessan Kouamé</li>
+                        <li>Jordan Dongmo</li>
+                        <li>Xavier Chavalerin</li>
+                        <li>Andreas Bruus</li>
+                        <li style="color: black; text-align: center;">ATTACKERS</li>
+                        <li>Kyliane Dong</li>
+                        <li>Mama Baldé</li>
+                        <li>Iké Ugbo</li>
+                        <li>Alexis Lefebvre</li>
+                    </ul>
+                  </div>
+
+                  <!--FC Lorient-->
+                  <div style="background: linear-gradient(140deg , black , orange);" class="li-click-content">
+                    <h1>FC Lorient</h1>
+                    <p>
+                      Football Club Lorient Bretagne Sud (commonly referred to FC Lorient or simply Lorient)
+                      is a French association football club based in Lorient, Brittany.
+                      The club was founded in 1926 and currently competes in Ligue 1,
+                      the top flight of French football, following promotion from Ligue 2
+                      in the 2019–20 season. Lorient plays its home matches at the Stade Yves Allainmat,
+                      named after the former mayor of Lorient.
+                      The stadium is surnamed Stade du Moustoir because of its location within the city.
+                       The team is managed by Régis Le Bris.
+                    </p>
+                    <img src="./li-images/lorei.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(241, 219, 20);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Teddy Bartouche</li>
+                      <li>	Julian Pollersbeck</li>
+                      <li>Yvon Mvogo</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Gédéon Kalulu</li>
+                      <li>Darlin Yongwa</li>
+                      <li>Vincent Le Goff </li>
+                      <li>Bamo Meïté</li>
+                      <li>Igor Carioca</li>
+                      <li>Montassar Omar Talbi</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Laurent Abergel </li>
+                      <li>Bonke Innocent</li>
+                      <li>Lamine Doumbouya</li>
+                      <li>Enzo Le Fée</li>
+                      <li>Jean-Victor Makengo</li>
+                      <li>Théo Le Bris</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Kenny Nagera</li>
+                      <li>Ibrahima Koné</li>
+                      <li>Ckene Doucouré</li>
+                      <li>Bamba Dieng</li>
+                  </ul>
+                  </div>
+
+                  <!--FC Nantes-->
+                  <div style="background: linear-gradient(140deg , rgba(105, 226, 6, 0.747) , rgba(255, 251, 0, 0.76));" class="li-click-content">
+                    <h1>FC Nantes</h1>
+                    <p>
+                      Football Club de Nantes ,commonly referred to as FC Nantes or simply Nantes,
+                      is a French professional football club based in Nantes in Pays de la Loire.
+                       The club was founded on 21 April 1943, during World War II,
+                       as a result of local clubs based in the city coming together to form one large club
+                      . From 1992 to 2007, the club was referred to as FC Nantes Atlantique before reverting
+                       to its current name at the start of the 2007–08 season. Nantes play in Ligue 1,
+                        the first division of Football in France. Nantes is one of the most successful clubs
+                         in French football, having won eight Ligue 1 titles,
+                       four Coupe de France wins and attained one Coupe de la Ligue victory.
+                    </p>
+                    <img src="./li-images/nantes.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(241, 219, 20);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Rémy Descamps</li>
+                      <li>Alban Lafont </li>
+                      <li>Denis Petrić</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Jaouen Hadjam</li>
+                      <li>Charles Traoré</li>
+                      <li>Jean-Charles Castelletto</li>
+                      <li>Fabien Centonze</li>
+                      <li>Sébastien Corchia</li>
+                      <li>Andrei Girotto</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Lohann Doucet</li>
+                      <li>Pedro Chirivella</li>
+                      <li>Gor Manvelyan</li>
+                      <li>Samuel Moutoussamy</li>
+                      <li>Moussa Sissoko</li>
+                      <li>Ludovic Blas </li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Mostafa Mohamed</li>
+                      <li>Andy Delort</li>
+                      <li>Evann Guessand</li>
+                      <li>Ignatius Ganago</li>
+                  </ul>
+                  </div>
+
+                  <!--Losc Lille-->
+                  <div style="background: linear-gradient(140deg , red , blue);" class="li-click-content">
+                    <h1>Losc Lille</h1>
+                    <p>
+                      Lille Olympique Sporting Club , commonly referred to as LOSC, LOSC Lille or simply Lille,
+                      is a French professional football club based in Lille, Hauts-de-France that competes in
+                      Ligue 1, the top flight of French football. Lille has played its home matches since 
+                      2012 at Stade Pierre-Mauroy, the fourth-largest football stadium in France.
+                      The 50,186-capacity retractable
+                      roof venue replaced the club's previous home of Stadium Lille-Metropole.
+                    </p>
+                    <img src="./li-images/losc.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(255, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Lucas Chevalier</li>
+                      <li>Benoît Costil</li>
+                      <li>Adam Jakubech</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Bafodé Diakité</li>
+                      <li>Ismaily</li>
+                      <li>José Fonte </li>
+                      <li>Alexsandro Ribeiro</li>
+                      <li>Tiago Djaló</li>
+                      <li>Gabriel Gudmundsson</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Carlos Baleba</li>
+                      <li>Benjamin André </li>
+                      <li>Ichem Ferrah</li>
+                      <li>Matteo Makhabé</li>
+                      <li>Jonas Martin</li>
+                      <li>Simon Ramet</li>
+                      <li>André Gomes</li>
+                      <li>Isaac Lihadji</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Jonathan David</li>
+                      <li>Mohamed Lamine Bayo</li>
+                      <li>Adam Ounas</li>
+                  </ul>
+                  </div>
+
+                  <!--Montpellier Herault SC-->
+                  <div style="background: linear-gradient(140deg , rgb(0, 4, 255) , rgb(206, 206, 216));" class="li-click-content">
+                    <h1>Montpellier Herault SC</h1>
+                    <p>
+                      Montpellier Hérault Sport Club ), commonly referred to as Montpellier HSC or
+                      simply Montpellier, is a French professional football club based in the city
+                      of Montpellier in Occitanie. The original club was founded in 1919, while the
+                      current incarnation was founded through a merger in 1974. Montpellier currently 
+                      plays in Ligue 1, the top level of French football and plays 
+                      its home matches at the Stade de la Mosson, located within the city.
+                      The first team is managed by Romain Pitau and captained by Teji Savanier.
+                    </p>
+                    <img src="./li-images/mont.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 26, 255);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Dimitry Bertaud</li>
+                      <li>Matis Carvalho</li>
+                      <li>Bingourou Kamara</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Falaye Sacko</li>
+                      <li>Enzo Tchato</li>
+                      <li>Pedro Mendes</li>
+                      <li>Théo Sainte-Luce</li>
+                      <li>Thibault Tamas</li>
+                      <li>Téo Allix</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Jordan Ferri </li>
+                      <li>Léo Leroy</li>
+                      <li>Matéo Loubatieres</li>
+                      <li>Arnaud Nordin</li>
+                      <li>Téji Savanier </li>
+                      <li>Khalil Fayad</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Sepe Elye Wahi</li>
+                      <li>Valère Germain</li>
+                      <li>Wahbi Khazri</li>
+                      <li>Béni Makouana</li>
+                  </ul>
+                  </div>
+                  
+                  <img class="li-image" src="./li-images/logos/OGC_Nice_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Olympique_Marseille_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Logo_Olympique_Lyonnais_2022.png">
+                  <img class="li-image" src="./li-images/logos/Paris_Saint-Germain_F.C..svg.png">
+                  <img class="li-image" src="./li-images/logos/RC_Lens_logo.svg.png">
+
+
+                  <!--OGC Nice-->
+                  <div style="background: linear-gradient(140deg , rgb(0, 0, 0) , rgb(250, 0, 0));" class="li-click-content">
+                    <h1>OGC Nice</h1>
+                    <p>
+                      OGC Nice was founded under the name Gymnaste Club de Nice and is one 
+                      of the founding members of the first division of French football. 
+                      The club has won Ligue 1 four times, the Trophee des Champions one time 
+                      and the Coupe de France three times. It achieved most of its honours in
+                      the 1950s with the club being managed by coaches such as Numa Andoire,
+                      Englishman William Berry, and Jean Luciano. The club's last honour was 
+                      winning the Coupe de France in 1997 after defeating Guingamp 
+                      4–3 on penalties in the final. Nice's colours are red and black.
+                    </p>
+                    <img src="./li-images/nice.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Teddy Boulhendi</li>
+                      <li>Marcin Bułka</li>
+                      <li>Kasper Schmeichel</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Jordan Lotomba</li>
+                      <li>Antoine Mendy</li>
+                      <li>Melvin Bard</li>
+                      <li>Youcef Atal</li>
+                      <li>Dante </li>
+                      <li>Yannis Nahounou</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Hicham Boudaoui</li>
+                      <li>Alexis Beka Beka</li>
+                      <li>Reda Belahyane</li>
+                      <li>Aaron Ramsey</li>
+                      <li>Badredine Bouanani</li>
+                      <li>Khéphren Thuram-Ulie</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Terem Moffi</li>
+                      <li>Gaëtan Laborde</li>
+                      <li>Bilal Brahimi</li>
+                  </ul>
+                  </div>
+
+                  <!--Olympique De Marseille-->
+                  <div style="background: linear-gradient(140deg , rgb(0, 204, 255) , rgb(0, 179, 250));" class="li-click-content">
+                    <h1>Olympique De Marseille</h1>
+                    <p>
+                      Olympique de Marseille Occitan: Olimpic de Marselha, pronounced also known simply 
+                      as Marseille or by the abbreviation OM, a French professional men's football club
+                      based in Marseille, Provence-Alpes-Côte d'Azur. Founded in 1899, the club plays 
+                      in Ligue 1 and have spent most of their history in the top tier of French football.
+                      The club has won ten Ligue 1 titles, ten Coupes de France and three Coupes de la Ligue.
+                      In 1993, coach Raymond Goethals led the team to become the first and only French club
+                      to win the UEFA Champions League, defeating Milan 1–0 in the final, the first under 
+                      the UEFA Champions League branding of the tournament. In 2010, Marseille won its first Ligue 1 title in
+                      18 years under the management of former club captain Didier Deschamps.[5]
+                    </p>
+                    <img src="./li-images/mars.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>	Rubén Blanco</li>
+                      <li>Pau López</li>
+                      <li>Simon Ngapandouetnbu</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Chancel Mbemba</li>
+                      <li>Eric Bailly</li>
+                      <li>Issa Kaboré</li>
+                      <li>Leonardo Balerdi</li>
+                      <li>Sead Kolašinac</li>
+                      <li>Nuno Tavares</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Jonathan Clauss</li>
+                      <li>Valentin Rongier </li>
+                      <li>Jordan Veretout</li>
+                      <li>Nassim Ahmed</li>
+                      <li>Mattéo Guendouzi</li>
+                      <li>Dimitri Payet </li>
+                      <li>Ruslan Malinovskyi</li>
+                      <li>Amine Harit</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Cengiz Ünder</li>
+                      <li>Alexis Sánchez</li>
+                      <li>Esey Gebreyesus</li>
+                      <li>Pedro</li>
+                  </ul>
+                  </div>
+
+                  <!--Olympique Lyonnais-->
+                  <div style="background: linear-gradient(360deg , rgb(4, 12, 238) , rgb(187, 26, 26));" class="li-click-content">
+                    <h1>Olympique Lyonnais</h1>
+                    <p>
+                      Olympique Lyonnais , commonly referred to as simply Lyon or OL,
+                      is a men and women's French professional football club based in
+                      Lyon in Auvergne-Rhône-Alpes. The men play in France's highest
+                      football division, Ligue 1. Founded in 1950, the club won its
+                      first Ligue 1 championship in 2002, starting a national
+                      record-setting streak of seven successive titles. Lyon has also won eight
+                      Trophées des Champions,
+                      five Coupes de France, and three Ligue 2 titles.
+                    </p>
+                    <img src="./li-images/lyon.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Kayne Bonnevie</li>
+                      <li>Anthony Lopes</li>
+                      <li>Rémy Riou</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Sael Kumbedi</li>
+                      <li>Nicolás Tagliafico</li>
+                      <li>Jérôme Boateng</li>
+                      <li>Damien da Silva</li>
+                      <li>Sinaly Diomandé</li>
+                      <li>Malo Gusto</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Corentin Tolisso</li>
+                      <li>Maxence Caqueret</li>
+                      <li>Djibrail Dib</li>
+                      <li>Mohamed El Arouch</li>
+                      <li>Johann Lepenant</li>
+                      <li>Bradley Barcola</li>
+                      <li>Rayan Cherki</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Alexandre Lacazette </li>
+                      <li>Moussa Dembélé</li>
+                      <li>Amin Sarr</li>
+                      
+                  </ul>
+                  </div>
+
+                  <!--Paris Saint-Germain-->
+                  <div style="background: linear-gradient(140deg , rgb(25, 0, 255) , rgb(150, 145, 145));" class="li-click-content">
+                    <h1>Paris Saint-Germain</h1>
+                    <p>
+                      Paris Saint-Germain Football Club ,
+                       commonly referred to as Paris Saint-Germain, Paris, Paris SG or simply
+                        PSG is a professional football club based in Paris, France. They compete
+                         in Ligue 1, the top division of French football. As France's most 
+                         successful club, they have won over 40 official honours, including 
+                         ten league titles and one major European trophy. Their home ground is 
+                         the Parc des Princes.
+                    </p>
+                    <img src="./li-images/paris.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(255, 255, 255);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Gianluigi Donnarumma</li>
+                      <li>Alexandre Letellier</li>
+                      <li>Sergio Rico</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Timothee Pembele</li>
+                      <li>Juan Bernat</li>
+                      <li>El Chadaille Bitshiabu</li>
+                      <li>Marquinhos </li>
+                      <li>Achraf Hakimi</li>
+                      <li>Presnel Kimpembe </li>
+                      <li>Nordi Mukiele</li>
+                      <li>Sergio Ramos</li>
+                      <li>Nuno Mendes</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Ismaël Gharbi</li>
+                      <li>Fabián Ruiz</li>
+                      <li>Warren Zaire-Emery</li>
+                      <li>Vitinha</li>
+                      <li>Danilo Pereira</li>
+                      <li>Renato Sanches</li>
+                      <li>Carlos Soler</li>
+                      <li>Marco Verratti</li>
+                      <li>Neymar Jr</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Ilyes Housni</li>
+                      <li>Kylian Mbappé</li>
+                      <li>Lionel Messi</li>
+                      <li>Hugo Ekitike</li>
+                  </ul>
+                  </div>
+
+                  <!--RC Lens-->
+                  <div style="background: linear-gradient(20deg , rgb(255, 0, 0) , rgb(255, 251, 0));" class="li-click-content">
+                    <h1>RC Lens</h1>
+                    <p>
+                      Racing Club de Lens (commonly referred to as RC Lens or simply Lens)
+                      is a French professional football club based in the northern city of
+                      Lens in the Pas-de-Calais department. Its nickname, les sang et or
+                      (the blood and gold), comes from its traditional colors of red and gold.
+                      Their traditional rivals are their northern neighbors Lille, with whom 
+                      they contest the Derby du Nord.
+                      Their most famous trophy is winning the championship in 1998.
+                      the Parc des Princes.
+                    </p>
+                    <img src="./li-images/lens.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Wuilker Fariñez</li>
+                      <li>Yannick Pandor</li>
+                      <li>Brice Samba</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Jonathan Gradit</li>
+                      <li>Julien Le Cardinal</li>
+                      <li>Facundo Medina</li>
+                      <li>Kevin Danso</li>
+                      <li>Steven Fortes</li>
+                      <li>Massadio Haïdara</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Seko Fofana </li>
+                      <li>Deiver Machado</li>
+                      <li>Ismaëlben Boura</li>
+                      <li>Salis Abdul Samed</li>
+                      <li>Adrien Thomasson</li>
+                      <li>Adam Oudjani</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Florian Sotoca </li>
+                      <li>Adam Buksa</li>
+                      <li>Wesley Saïd</li>
+                      <li>Loïs Openda</li>
+                  </ul>
+                  </div>
+
+                  
+                  <img class="li-image" src="./li-images/logos/Racing_Club_de_Strasbourg_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Stade_Brestois_29_logo.png">
+                  <img class="li-image" src="./li-images/logos/Stade_de_Reims_logo.svg.png">
+                  <img class="li-image" src="./li-images/logos/Stade_Rennais_FC.svg.png">
+                  <img class="li-image" src="./li-images/logos/Toulouse_FC_2018_logo.svg.png">
+                  
+                  <!--RC Strasbourg Alsace-->
+                  <div style="background: linear-gradient(140deg , rgb(0, 204, 255) , rgb(228, 8, 8));" class="li-click-content">
+                    <h1>RC Strasbourg Alsace</h1>
+                    <p>
+                      Racing Club de Strasbourg Alsace is a French association football
+                      club founded in 1906, based in the city of Strasbourg, Alsace.
+                      It has possessed professional status since 1933 and is currently
+                      playing in Ligue 1, the top tier of French football, ever since
+                      winning the 2016–17 Ligue 2 championship. This comes after the
+                      club was demoted to the fifth tier of French football at the
+                      conclusion of the 2010–11 Championnat National season after
+                      going into financial liquidation. Renamed RC Strasbourg Alsace, they won
+                      the CFA championship in 2012–13, and eventually became Championed National champions in 2015–16.
+                      The club's home stadium, since 1914, is the Stade de la Meinau.
+                    </p>
+                    <img src="./li-images/alsace.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Eiji Kawashima</li>
+                      <li>Robin Risser</li>
+                      <li>Alexandre Pierre</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Alexander Djiku </li>
+                      <li>Colin Dagba</li>
+                      <li>Ismaël Doukouré</li>
+                      <li>Frédéric Guilbert</li>
+                      <li>Maxime Le Marchand</li>
+                      <li>Antoine Nuss</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Thomas Delaine</li>
+                      <li>Dimitri Liénard </li>
+                      <li>Mouhamadou Diarra</li>
+                      <li>Nordine Kandil</li>
+                      <li>Morgan Sanson</li>
+                      <li>Jean-Ricner Bellegarde</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Lebo Mothiba</li>
+                      <li>Kevin Gameiro</li>
+                      <li>Habib Diallo</li>
+                      <li>Yuito Suzuki</li>
+                  </ul>
+                  </div>
+
+                  <!--Stade Brestois 29-->
+                  <div style="background: linear-gradient(140deg , rgb(160, 188, 196) , rgb(228, 8, 8));" class="li-click-content">
+                    <h1>Stade Brestois 29</h1>
+                    <p>
+                      Stade Brestois 29 or simply Brest, is a French football club based in Brest.
+                      It was founded in 1950 following the merger of five local patronages, including
+                      Armoricaine de Brest, founded in 1903.In its early years, the club made a rapid
+                      rise in the hierarchy of regional football, to the point of being promoted to
+                      the French Amateur Championship, the third level of French football, in 1958
+                      . The club joined the Second Division in 1970, then finally reached the First
+                      Division in 1979. The club only returned to the second division in 2004 and 
+                      Ligue 1 in 2010. At the end of the 2012–2013 season, it had respectively 
+                      thirteen and seventeen seasons in the French First and Second divisions. 
+                    </p>
+                    <img src="./li-images/brest.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Marco Bizot</li>
+                      <li>	Joaquin Blazquez</li>
+                      <li>	Grégoire Coudert</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Noah Fadiga</li>
+                      <li>Kenny Lala</li>
+                      <li>Jean-Kevin Duverne</li>
+                      <li>Brendan Chardonnet </li>
+                      <li>Achraf Dari</li>
+                      <li>Christophe Hérelle</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Pierre Lees Melou </li>
+                      <li>Mahdi Camara</li>
+                      <li>Haris Belkebla</li>
+                      <li>Franck Honorat</li>
+                      <li>Taïryk Arconte</li>
+                      <li>Banzouzi Locko</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Karamoko Dembélé</li>
+                      <li>Romain Del Castillo</li>
+                      <li>Steve Mounié</li>
+                      <li>Jérémy Le Douaron</li>
+                  </ul>
+                  </div>
+
+                  <!--Stade De Reims-->
+                  <div style="background: linear-gradient(140deg , rgb(24, 28, 29) , rgb(228, 8, 8));" class="li-click-content">
+                    <h1>Stade De Reims</h1>
+                    <p>
+                        Stade de Reims is a French professional football club based in Reims.
+                        The club was formed in 1910 and plays in Ligue 1, the top level of 
+                        Football in France, having been promoted from Ligue 2 in 2018. Reims
+                        plays home matches at the Stade Auguste Delaune and are managed by 
+                        William Still.Reims is one of the most successful clubs in French
+                        football history having won six Ligue 1 titles, two Coupe de France
+                        trophies, and five Trophée des champions titles. Since the 1980s,
+                        Reims have struggled to get back to their zenith. The club hovered
+                        between Ligue 2 and the Championnat National for over thirty years
+                        after their relegation from the top flight in 1979. In 2012,
+                        they were promoted back to Ligue 1,
+                        were relegated again in 2016, but returned two years later.
+                    </p>
+                    <img src="./li-images/reims.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Yehvann Diouf</li>
+                      <li>Florent Duparchy</li>
+                      <li>Alexandre Olliero</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Yunis Abdelhamid </li>
+                      <li>Emmanuel Agbadou</li>
+                      <li>Maxime Busi</li>
+                      <li>Maiky de la Cruz</li>
+                      <li>Thibault De Smet</li>
+                      <li>Thomas Foket</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Jens Cajuste</li>
+                      <li>Dion Lopy</li>
+                      <li>Azor Matusiwa</li>
+                      <li>Samuel Koeberlé</li>
+                      <li>Marshall Munetsi</li>
+                      <li>Arbër Zeneli</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Myziane Maolida</li>
+                      <li>Noah Holm</li>
+                      <li>Kaj Sierhuis</li>
+                      <li>Folarin Balogun</li>
+                  </ul>
+                  </div>
+
+                  <!--Stade Rennais FC-->
+                  <div style="background: linear-gradient(to right , rgb(0, 0, 0) , rgb(228, 8, 8));" class="li-click-content">
+                    <h1>Stade Rennais FC</h1>
+                    <p>
+                      Stade Rennais Football Club ,commonly referred to as Stade Rennais FC,
+                       Stade Rennais, Stade Rennes, Rennes, or simply SRFC, is a French professional
+                      football club based in Rennes, Brittany. They compete in Ligue 1, the top tier
+                      of French football, and play their home matches at the Roazhon Park. The team's
+                      president is Nicolas Holveck, and its owner is Artémis,
+                      the holding company of businessman François Pinault.
+                    </p>
+                    <img src="./li-images/rennais.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Doğan Alemdar</li>
+                      <li>Elias Damergy</li>
+                      <li>Steve Mandanda</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Lorenz Assignon</li>
+                      <li>Hamari Traoré </li>
+                      <li>Birger Meling</li>
+                      <li>Adrien Truffert</li>
+                      <li>Jeanöel Belocian</li>
+                      <li>Guela Doué</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Djed Spence</li>
+                      <li>Xeka</li>
+                      <li>Désiré Doué</li>
+                      <li>Lovro Majer</li>
+                      <li>Chimuanya Ugochukwu</li>
+                      <li>Jeremy Doku</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Benjamin Bourigeaud </li>
+                      <li>Martin Terrier</li>
+                      <li>Alan Do Marcolino</li>
+                      <li>Amine Gouiri</li>
+                  </ul>
+                  </div>
+
+                  <!--Toulouse FC-->
+                  <div style="background: linear-gradient(140deg , rgb(163, 4, 255) , rgb(146, 33, 33));" class="li-click-content">
+                    <h1>Toulouse FC</h1>
+                    <p>
+                      Toulouse Football Club is French professional football club based in
+                      Toulouse. The club was founded in 1970 and currently plays in Ligue 1,
+                      the premier division of French football. Toulouse plays its home
+                      matches at the Stadium de Toulouse located within the city.
+                      Les Pitchouns have won Ligue 2 on three occasions. Toulouse 
+                      have participated in European competition five times, including in
+                      2007 when they qualified for the UEFA Champions League for the first time.[3]
+                    </p>
+                    <img src="./li-images/toulouse.jpg">
+                    <ul style="box-shadow: 3px 3px 3px rgb(0, 0, 0);">
+                      <li style="color: black; text-align: center;">GOALKEEPERS</li>
+                      <li>Maxime Dupé</li>
+                      <li>Guillaume Restes</li>
+                      <li>Thomas Himeur</li>
+                      <li style="color: black; text-align: center;">DEFENDERS</li>
+                      <li>Mikkel Desler</li>
+                      <li>Kévin Keben Biakolo</li>
+                      <li>Christian Mawissa</li>
+                      <li>Moussa Diarra</li>
+                      <li>Gabriel Suazo</li>
+                      <li>Oliver Zandén</li>
+                      <li style="color: black; text-align: center;">MIDFIELDERS</li>
+                      <li>Denis Genreau</li>
+                      <li>Branco van den Boomen </li>
+                      <li>Brecht Dejaegere </li>
+                      <li>Waren Kamanzi</li>
+                      <li>Stijn Spierings</li>
+                      <li>Vincent Sierro</li>
+                      <li style="color: black; text-align: center;">ATTACKERS</li>
+                      <li>Thijs Dallinga</li>
+                      <li>Veljko Birmančević</li>
+                      <li>Rafael Ratão</li>
+                      <li>Fares Chaïbi</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            
+          <!--Stats-->
+            <div id="li-tab-3" class="li-tab-item">
+              <div class="li-stats" id="stats">
+               <div class="li-stats-cards">
+
+                <!--FIRSTTTTTTTTTTTTTTTTTTTTTTTTTT-->
+
+                <!--Delio Onnis-->
+                <p class="li-out">TOP GOALS ALL TIME</p>
+                <div class="li-a1" id="li-so1">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">1</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="70px">
+                        <h3>&nbsp; Delio Onnis <br>&nbsp;&nbsp;(forward striker)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">299</span><br>GOALS<br><br><br><span style="font-size: 2.5em;">499</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">0.67</span><br>&nbsp;&nbsp;RATIO</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">1971</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">1986</span><br>LAST APP</p>
+                    </div>
+                </div>
+
+                <!--Bernard Lacombe-->
+                <div class="li-a2" id="li-so2">
+                  &nbsp;<p class="li-ver">Ligue 1</p>
+                  <div class="li-disc1">
+                      <h1><span style="font-size: 2em;">2</span><br><span style="font-size: 0.6em;">place</span></h1>
+                      <hr class="li-hr" size="70px">
+                      <h3>&nbsp;Bernard Lacombe<br>&nbsp;&nbsp;(Striker)</h3>  
+                  </div>
+                  <div class="li-stat1">
+                      <p><span style="font-size: 2.5em;">255</span><br>GOAL<br><br><br><span style="font-size: 2.5em;">497</span><br>MATCH</p>
+                      <hr class="li-hr" size="172px">
+                      <p><span style="font-size: 2.5em;">0.51</span><br>&nbsp;&nbsp;RATIO</p>
+                      <hr class="li-hr" size="172px">
+                      <p><span style="font-size: 2.5em;">1969</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">1987</span><br>LAST APP</p>
+                  </div> 
+                </div>
+
+                <!--Hervé Revelli-->
+                <div class="li-a3" id="li-so3">
+                  &nbsp;<p class="li-ver">Ligue 1</p>
+                  <div class="li-disc1">
+                      <h1><span style="font-size: 2em;">3</span><br><span style="font-size: 0.6em;">place</span></h1>
+                      <hr class="li-hr" size="70px">
+                      <h3 style="font-size: 1.3em;">&nbsp;Hervé Revelli<br>&nbsp;&nbsp;(Striker)</h3>  
+                  </div>
+                  <div class="li-stat1">
+                      <p><span style="font-size: 2.5em;">216</span><br>GOAL<br><br><br><span style="font-size: 2.5em;">389</span><br>MATCH</p>
+                      <hr class="li-hr" size="172px">
+                      <p><span style="font-size: 2.5em;">0.56</span><br>&nbsp;&nbsp;RATIO</p>
+                      <hr class="li-hr" size="172px">
+                      <p><span style="font-size: 2.5em;">1965</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">1978</span><br>LAST APP</p>
+                  </div> 
+                </div>
+
+
+                <!--SECONDDDDDDDDDDDDDDDDDDDDD-->
+
+                <!--Mickaël Landreau-->
+                <p class="li-out">MOST MATCHES PLAYED</p>
+                <div class="li-a4" id="li-ma1">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">1</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp; Mickaël Landreau <br>&nbsp;&nbsp;(Goalkeeper)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">0</span><br>GOALS<br><br><br><span style="font-size: 2.5em;">618</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;"></span><br>&nbsp;&nbsp;</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">1997</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">2014</span><br>LAST APP</p>
+                    </div>   
+                 </div>
+
+                <!--Jean-Luc Ettori-->
+                <div class="li-a5" id="li-ma2">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">2</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp;Jean-Luc Ettori<br>&nbsp;&nbsp;(Goalkeeper)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">0</span><br>GOALS<br><br><br><span style="font-size: 2.5em;">602</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;"></span><br>&nbsp;&nbsp;</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">1975</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">1994</span><br>LAST APP</p>
+                    </div>   
+                </div>
+
+                <!--Dominique Dropsy-->
+                <div class="li-a6" id="li-ma3">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">3</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp;Dominique Dropsy<br>&nbsp;&nbsp;(Goalkeeper)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">0</span><br>GOALS<br><br><br><span style="font-size: 2.5em;">596</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;"></span><br>&nbsp;&nbsp;</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">1971</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">1989</span><br>LAST APP</p>
+                    </div>   
+                </div>
+
+                <!--THIRDDDDDDDDDDDDDDDDDDDDDDDDD-->
+
+                <!--Dimitri Payet-->
+                <p class="li-out">TOP ASSIST ALL TIME</p>
+                <div class="li-a7" id="li-as1">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">1</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp;Dimitri Payet<br>&nbsp;&nbsp;(Attack midfield)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">115</span><br>ASSISTS<br><br><br><span style="font-size: 2.5em;">485</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">0.23</span><br>&nbsp;&nbsp;RATIO</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">2004</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">NOW</span><br>LAST APP</p>
+                    </div> 
+                </div>
+
+                <!--Ángel Di María-->
+                <div class="li-a8" id="li-as2">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">2</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp;Ángel Di María<br>&nbsp;&nbsp;(Attack midfield)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">72</span><br>ASSISTS<br><br><br><span style="font-size: 2.5em;">197</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">0.36</span><br>&nbsp;&nbsp;RATIO</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">2005</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">NOW</span><br>LAST APP</p>
+                    </div> 
+                </div>
+
+                <!--Jimmy Briand-->
+                <div class="li-a9" id="li-as3">
+                    &nbsp;<p class="li-ver">Ligue 1</p>
+                    <div class="li-disc1">
+                        <h1><span style="font-size: 2em;">3</span><br><span style="font-size: 0.6em;">place</span></h1>
+                        <hr class="li-hr" size="60px">
+                        <h3>&nbsp;Jimmy Briand<br>&nbsp;&nbsp;(Attack midfield)</h3>  
+                    </div>
+                    <div class="li-stat1">
+                        <p><span style="font-size: 2.5em;">63</span><br>ASSISTS<br><br><br><span style="font-size: 2.5em;">481</span><br>MATCH</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">0.13</span><br>&nbsp;&nbsp;RATIO</p>
+                        <hr class="li-hr" size="172px">
+                        <p><span style="font-size: 2.5em;">2002</span><br>FIRST APP<br><br><br><span style="font-size: 2.5em;">2022</span><br>LAST APP</p>
+                    </div> 
+                </div>
+              </div>
+
+              <div class="li-allrows">
+                <h1 class="li-toprow">TOP GOALS IN ONE SEASON</h1>
+
+                <!--Josip Skoblar-->
+                <div class="li-row1" id="row1">
+                  <div class="li-row-img">
+                      <img src="./li-images/Stats/skoplar1.png">
+                  </div>
+                  <div class="li-playername">
+                      <h1><span style="font-size: 3.5em;">1</span><br><span style="font-size: 0.6em;">place</span></h1>
+                      <hr class ="li-hh" size="130px">
+                      <h3>&nbsp; Josip Skoblar<br>&nbsp;&nbsp;(forward striker)</h3>
+                  </div>
+                  <div class="li-statues">
+                      <p><span style="font-size: 2.5em;">44</span><br>GOALS</p>
+                      <p><span style="font-size: 2.5em;">36</span><br>MATCH</p>
+                      <p><span style="font-size: 2.5em;">1.22</span><br>&nbsp;&nbsp;RATIO</p>
+                      <p><span style="font-size: 2.5em;">1958</span><br>FIRST APP</p>
+                      <p><span style="font-size: 2.5em;">1977</span><br>LAST APP</p>
+                  </div>
+              </div>
+
+              <!--Zlatan Ibrahimović-->
+              <div class="li-row1" id="row2">
+                <div class="li-row-img">
+                    <img src="./li-images/Stats/zaltan.jpg">
+                </div>
+                <div class="li-playername">
+                    <h1><span style="font-size: 3.5em;">2</span><br><span style="font-size: 0.6em;">place</span></h1>
+                    <hr class ="li-hh" size="130px">
+                    <h3>&nbsp;Zlatan Ibrahimović<br>&nbsp;&nbsp;(forward striker)</h3>
+                </div>
+                <div class="li-statues">
+                    <p><span style="font-size: 2.5em;">38</span><br>GOALS</p>
+                    <p><span style="font-size: 2.5em;">31</span><br>MATCH</p>
+                    <p><span style="font-size: 2.5em;">1.23</span><br>&nbsp;&nbsp;RATIO</p>
+                    <p><span style="font-size: 2.5em;">1999</span><br>FIRST APP</p>
+                    <p><span style="font-size: 2.5em;">NOW</span><br>LAST APP</p>
+                </div>
+              </div>
+
+              <!--Carlos Bianchi-->
+              <div class="li-row1" id="row3">
+                <div class="li-row-img">
+                    <img src="./li-images/Stats/carlos.jpg">
+                </div>
+                <div class="li-playername">
+                    <h1><span style="font-size: 3.5em;">3</span><br><span style="font-size: 0.6em;">place</span></h1>
+                    <hr class ="li-hh" size="130px">
+                    <h3>&nbsp;Carlos Bianchi<br>&nbsp;&nbsp;(forward striker)</h3>
+                </div>
+                <div class="li-statues">
+                    <p><span style="font-size: 2.5em;">37</span><br>GOALS</p>
+                    <p><span style="font-size: 2.5em;">38</span><br>MATCH</p>
+                    <p><span style="font-size: 2.5em;">0.97</span><br>&nbsp;&nbsp;RATIO</p>
+                    <p><span style="font-size: 2.5em;">1967</span><br>FIRST APP</p>
+                    <p><span style="font-size: 2.5em;">1985</span><br>LAST APP</p>
+                </div>
+              </div>
+            </div>
+
+              <div class="li-stattables">
+                <h1 class="li-sub1">TOP TRANSFER RECORD</h1>
+                <h1 class="li-sub2"> TOP CHAMPIONED CLUBS</h1>
+                <table class="li-table1" id="li-ta1">
+                  <tr>
+                    <td><img src="./li-images/Stats/ney.webp"></td>
+                    <td>Neymar</td>
+                    <td>Paris SG</td>
+                    <td>€222.00m</td>
+                  </tr>
+                  <tr>
+                    <td><img src="./li-images/Stats/mbappe.webp"></td>
+                    <td>Kylian Mbappé</td>
+                    <td>Paris SG</td>
+                    <td>€180.00m</td>
+                  </tr>
+                  <tr>
+                    <td><img src="./li-images/Stats/haki.webp"></td>
+                    <td>Achraf Hakimi</td>
+                    <td>Paris SG</td>
+                    <td>€68.00m</td>
+                  </tr>
+                </table>
+
+                <table class="li-table2" id="li-ta2">
+                  <tr>
+                    <td><img src="./li-images/logos/Paris_Saint-Germain_F.C..svg.png"></td>
+                    <td>Paris SG</td>
+                    <td>10 wins</td>
+                    <td>1986,1993,2012,<br>2013,2014,2015,<br>2017,2018,2019,2021</td>
+                  </tr>
+                  <tr>
+                    <td><img src="./li-images/logos/AS_Saint-Étienne_logo.svg.png"></td>
+                    <td>Saint-Étienne</td>
+                    <td>10 wins</td>
+                    <td>1956,1963,1966,<br>1967,1968,1969,<br>1973,1974,1975,1980</td>
+                  </tr>
+                  <tr>
+                    <td><img src="./li-images/logos/Olympique_Marseille_logo.svg.png"></td>
+                    <td>Marseille</td>
+                    <td>9 wins</td>
+                    <td>1936,1947,1970,<br>1971,1988,1989,<br>1990,1991,2009</td>
+                  </tr>
+                </table>         
+              </div>
+           </div>
+          </div>
+
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer-distributed" id="li-footer">
+        <div class="footer-left">
+            <h3>Top 5<span style="color:rgb(204, 255, 0);"> Leagues</span></h3>
+            <p class="footer-links">
+                <a href="Laliga.html">Laliga</a>&nbsp; &nbsp;
+                <a href="premier.html">Premier League</a>&nbsp; &nbsp;
+                <a style="color:rgb(204, 255, 0);" href="Ligue1.html">Ligue 1</a>&nbsp; &nbsp;
+                <a href="bundeslig.html">Bundesliga</a>&nbsp; &nbsp;
+                <a href="SeriaA.html">Seria A</a>
+            </p>
+            <p class="footer-company-name">LU Students © 2023</p>
+            <div class="footer-icons">
+                <a href="#"><img src="./images/facebook.jpg"/></a>
+                <a href="#" ><img src="./images/instagram.jpg"></a>
+                <a href="#" ><img src="./images/youtube.jpg"></a>
+                <a href="#" ><img src="./images/twitter.jpg"></a> 
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Contact Us</p>
+            <form action="https://formsubmit.co/ali_monzer16@hotmail.com" method="post">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </footer>
+    
+    <!--Script-->
+    <script type="text/javascript">
+
+    //NAVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+    document.addEventListener("scroll", function() {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+
+    //FORMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    const a = document.getElementById("popup-div");
+    const b = document.getElementById("li-head-all");
+    const c = document.getElementById("li-buttons");
+    const d = document.getElementById("li-contents");
+    const e = document.getElementById("li-footer");
+
+    function form() {
+      a.style.display = "none";
+      b.style.display = 'block';
+      c.style.display = 'flex';
+      d.style.display = 'block';
+      e.style.display = 'block';
+    }
+
+    document.getElementById("show-div").addEventListener("click", function() {
+      if(a.style.display === 'none') {
+        a.style.display = 'block';
+        b.style.display = 'none';
+        c.style.display = 'none';
+        d.style.display = 'none';
+        e.style.display = 'none';
+      }
+      else 
+        form();
+    });
+
+    document.getElementById('li-form-back').addEventListener("click", function() {form();});
+
+    //BLACK AND WHITEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+    var header = document.querySelector("header");
+    const blackbut = document.getElementById('headb');
+    const whitebut = document.getElementById('headw');
+    const blackdiv = document.getElementById('black');
+    const whitediv = document.getElementById('white');
+    const hist = document.getElementById('history1');
+    var x = document.getElementById("mytable").getElementsByTagName("td");
+    const clubs = document.getElementById('clubs');
+   
+    function Black() {
+      blackbut.addEventListener('click', e => {
+          header.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+          blackdiv.style.display = 'none';
+          whitediv.style.display = 'block';
+          hist.style.backgroundColor = '#FAF9F6';
+          hist.style.color = 'black';
+          clubs.style.backgroundColor = '#FAF9F6';
+          for(i=0;i<20;i++) {
+            x[i].style.color = "black";
+            x[i].style.border = " 1px solid black";
+          }
+      });
+    };
+
+    function White() {
+      whitebut.addEventListener('click', e => {
+          blackdiv.style.display = 'block';
+          whitediv.style.display = 'none';
+          hist.style.backgroundColor = 'black';
+          hist.style.color = 'white';
+          clubs.style.backgroundColor = 'black';
+          for(i=0;i<20;i++) {
+            x[i].style.color = "white";
+            x[i].style.border = "solid white 1px";
+          }
+      });
+    };
+    
+    //CLUBSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+    const images = document.querySelectorAll('.li-image');
+    const contents = document.querySelectorAll('.li-click-content');
+
+    images.forEach((image, index) => {
+      image.addEventListener('click', e   => {
+        contents.forEach((content, contentIndex) => {
+          if (index === contentIndex) {
+            //if(content.style.display === 'block')
+            //  content.style.display = 'none';
+            //else
+            //  content.style.display = 'block';
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          } else {
+            content.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    //HIDDEN DIVSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+    const tabs = document.querySelectorAll('.li-tab-btn');
+    const tabContents = document.querySelectorAll('.li-tab-item');
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', e  => {
+        tabContents.forEach((content, contentIndex) => {
+          tabs.forEach(tab => tab.classList.remove('active'));
+          e.currentTarget.classList.add('active');
+          if (index === contentIndex) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    //STATSCARDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+    const st1 = document.getElementById("li-so1");
+    const st2 = document.getElementById("li-so2");
+    const st3 = document.getElementById("li-so3");
+      setInterval(() => {
+        if (st1.style.display === 'block') {
+          st1.style.display = 'none';
+          st3.style.display = 'none';
+          st2.style.display = 'block';
+        }
+        else if(st2.style.display === 'block') {
+          st1.style.display = 'none';
+          st2.style.display = 'none';
+          st3.style.display = 'block';
+        }  
+        else {
+          st1.style.display = 'block';
+          st2.style.display = 'none';
+          st3.style.display = 'none';         
+        }
+        }, 4600);
+
+    const ma1 = document.getElementById("li-ma1");
+    const ma2 = document.getElementById("li-ma2");
+    const ma3 = document.getElementById("li-ma3");
+      setInterval(() => {
+        if (ma1.style.display === 'block') {
+          ma1.style.display = 'none';
+          ma3.style.display = 'none';
+          ma2.style.display = 'block';
+        }
+        else if(ma2.style.display === 'block') {
+          ma1.style.display = 'none';
+          ma2.style.display = 'none';
+          ma3.style.display = 'block';
+        }  
+        else {
+          ma1.style.display = 'block';
+          ma2.style.display = 'none';
+          ma3.style.display = 'none';         
+        }
+        }, 4600);
+
+    const as1 = document.getElementById("li-as1");
+    const as2 = document.getElementById("li-as2");
+    const as3 = document.getElementById("li-as3");
+      setInterval(() => {
+        if (as1.style.display === 'block') {
+          as1.style.display = 'none';
+          as3.style.display = 'none';
+          as2.style.display = 'block';
+        }
+        else if(as2.style.display === 'block') {
+          as1.style.display = 'none';
+          as2.style.display = 'none';
+          as3.style.display = 'block';
+        }  
+        else {
+          as1.style.display = 'block';
+          as2.style.display = 'none';
+          as3.style.display = 'none';         
+        }
+        }, 4600);
+    
+    //SLIDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+    document.addEventListener("scroll", function() {
+      var header = document.querySelector("#row1");
+      header.classList.toggle("anim1", window.scrollY > 1000);
+    })
+
+    document.addEventListener("scroll", function() {
+      var header = document.querySelector("#row2");
+      header.classList.toggle("anim2", window.scrollY > 1200);
+    })
+
+    document.addEventListener("scroll", function() {
+      var header = document.querySelector("#row3");
+      header.classList.toggle("anim1", window.scrollY > 1400);
+    })
+    </script>
+
+</body>
+</html>
